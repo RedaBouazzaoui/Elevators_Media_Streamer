@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'sign_up' => 'users#sign_up'
   get 'sign_in' => 'users#sign_in'
   get 'leads' => 'leads#new'
-
+  get 'Streamer' => 'pages#Streamer'
   get 'welcome' => 'watson#welcome'
   get 'geolocalisation/index'
   get 'interventions/index'

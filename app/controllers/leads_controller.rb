@@ -31,6 +31,7 @@ class LeadsController < ApplicationController
       ContactsMailer.contact_email(@lead).deliver
       flash[:notice] = "We received your request! "
       redirect_to :index
+      render json:@lead
     else
       flash[:notice] = "Request not succesfull."
       redirect_to index_path(anchor: "contact")

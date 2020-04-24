@@ -131,6 +131,21 @@ ActiveRecord::Schema.define(version: 2020_03_24_162123) do
     t.index ["reset_password_token"], name: "index_employees_on_reset_password_token", unique: true
   end
 
+  create_table "interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "author", null: false
+    t.bigint "building_id", null: false
+    t.bigint "customer_id", null: false
+    t.bigint "battery_id"
+    t.bigint "column_id"
+    t.bigint "elevator_id"
+    t.bigint "employee_id"
+    t.string "resultat"
+    t.string "status"
+    t.string "rapport"
+    t.datetime "start_intervention"
+    t.datetime "end_intervention"
+  end
+
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "full_name", null: false
     t.string "company_name"
@@ -168,20 +183,6 @@ ActiveRecord::Schema.define(version: 2020_03_24_162123) do
     t.string "Final_Price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-  create_table "interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "author", null: false
-    t.bigint "building_id", null: false
-    t.bigint "customer_id", null: false
-    t.bigint"battery_id"
-    t.bigint "column_id"
-    t.bigint "elevator_id"
-    t.string "employee_id"
-    t.string "resultat"
-    t.string "status"
-    t.string "rapport"
-    t.datetime "start_intervention"
-    t.datetime "end_intervention"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
