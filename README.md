@@ -14,7 +14,7 @@ Unit tests:
 
     File: ./spec/Controllers/Leads_controller_spec.rb Test command: rspec ./spec/Controllers/Leads_controller_spec.rb
 
-    File: ./spec/adminpanel_spec.rb Test command: rspec ./spec/adminpanel_spec.rb
+    
 
 TDD extra language repo: 
 
